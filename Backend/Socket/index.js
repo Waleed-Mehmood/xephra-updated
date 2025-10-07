@@ -9,8 +9,8 @@ const socketSetup = (server) => {
     cors: {
     // origin: "https://xephra.net", // Update with your frontend URL
       // origin: "https://xephra-two.vercel.app",
-      origin: "http://xephra.net",
-      // origin: ["http://localhost:3000", "http://127.0.0.1:5500", "http://localhost:5500"],
+      // origin: "http://xephra.net",
+      origin: ["http://localhost:3000", "http://127.0.0.1:5500", "http://localhost:5500"],
       methods: ["GET", "POST"],
       credentials: true
     },

@@ -30,8 +30,8 @@ startSubscriptionCron();
 const corsOptions = {
   // origin: "https://xephra.vercel.app",
   // origin: "https://xephra.net",
-  origin: ["http://localhost:3000", "http://127.0.0.1:5500", "http://localhost:5500"],
-  // origin: "https://xephra-two.vercel.app",
+  // origin: ["http://localhost:3000", "http://127.0.0.1:5500", "http://localhost:5500"],
+  origin: "https://xephra-new.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true, // Allows cookies to be sent
@@ -40,8 +40,8 @@ app.use(cors(corsOptions));
 
 // ✅ Handle preflight requests explicitly
 app.options("*", (req, res) => {
-  const allowedOrigins = ["http://localhost:3000", "http://127.0.0.1:5500", "http://localhost:5500"];
-  // const allowedOrigins = ["https://xephra.net"];
+  // const allowedOrigins = ["http://localhost:3000", "http://127.0.0.1:5500", "http://localhost:5500"];
+  const allowedOrigins = ["https://xephra-new.vercel.app"];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.header("Access-Control-Allow-Origin", origin);
